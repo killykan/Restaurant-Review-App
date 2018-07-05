@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
   <meta charset="utf-8">
@@ -13,32 +13,35 @@
 
 <body>
   <header>
-    <nav>
-      <h1><a href="/">Restaurant Reviews</a></h1>
+    <nav role="navigation">
+      <h1><a tabindex="0" href="/">Restaurant Reviews</a></h1>
     </nav>
   </header>
 
-  <main id="maincontent">
+  <main id="maincontent" role="main">
 
-    <section id="map-container">
-      <div id="map"></div>
+    <section id="map-container" aria-label="google map">
+      <div id="map" role="application" aria-label="true" aria-describedby="map-info"></div>
+      <span hidden id="map-info">Map showing filtered restaurants</span>
     </section>
 
     <section>
       <div class="filter-options">
-        <h2>Choose a <strong>Location</strong> or/and a <strong>cuisine</strong></h2>
-        <select id="neighborhoods-select" name="neighborhoods" onchange="updateRestaurants()">
+        <h2 tabindex="0">Choose a <strong>Location</strong> or/and a <strong>cuisine</strong></h2>
+        <select id="neighborhoods-select" aria-label="Select neighborhoods" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
-        <select id="cuisines-select" name="cuisines" onchange="updateRestaurants()">
+        <select id="cuisines-select" aria-label="Select cuisines" name="cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
       </div>
-      <ul id="restaurants-list"></ul>
+      <section>
+        <ul id="restaurants-list"></ul>
+      </section>
     </section>
   </main>
 
-  <footer id="footer">
+  <footer id="footer" role="contentinfo">
     Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
 
