@@ -7,10 +7,13 @@ var markers = []
 /**Service Worker Registration**/
 
 document.addEventListener("DOMContentLoaded", e =>{
-  if(!navigator.serviceWorker) return;
-  navigator.serviceWorker.register("/sw.js")
+  if('serviceWorker' in navigator) {
+  navigator.serviceWorker.register("/sw.js", {scope : '/'})
     .then((stats) => console.log("Service Worker registered : ", stats))
     .catch(err => console.log("Service Worker not registered : ", err));
+  } else {
+    mainMessage("alert","Your browser does not support Service Worker");
+  }
 
 });
 
