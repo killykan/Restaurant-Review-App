@@ -154,10 +154,12 @@ createReviewHTML = (review) => {
   const li = document.createElement('li');
   const name = document.createElement('h2');
   name.innerHTML = review.name;
+  name.setAttribute("tabIndex", "0");
   li.appendChild(name);
 
   const rating = document.createElement('h1');
   rating.innerHTML = `Rating: ${review.rating}`;
+  rating.setAttribute("tabIndex", "0");
   li.appendChild(rating);
 
   const date = document.createElement('h3');
@@ -168,6 +170,7 @@ createReviewHTML = (review) => {
 
   const comments = document.createElement('p');
   comments.innerHTML = review.comments;
+  comments.setAttribute("tabIndex", "0");
   li.appendChild(comments);
 
   return li;

@@ -9,7 +9,7 @@ body,td,th,p{
 }
 body {
 	background-color: #fdfdfd;
-	margin: 0;
+	margin: 0 5%;
 	position:relative;
 }
 ul, li {
@@ -299,6 +299,10 @@ nav h1 a {
 #reviews-container {
   padding: 1% 2%;
 }
+
+#reviews-container h2:focus{
+  outline: 2px solid #0093ff;
+}
 #reviews-container h2 {
   color: #f58500;
   font-size: 2em;
@@ -349,10 +353,18 @@ nav h1 a {
   box-shadow: 3px 3px 5px #000;
 }
 
+#reviews-list li h1:focus{
+  outline: 2px solid #0093ff;
+}
+
 
 #reviews-list li p {
   margin: 0 0 10px;
   font-size: 1.2em;
+}
+
+#reviews-list li p:focus{
+  outline: 2px solid #0093ff;
 }
 
 #restaurant-hours {
@@ -657,8 +669,8 @@ nav h1 a {
 
   #map {
     height: 650px;
-    width: 90%;
-    margin: 2% auto;
+    //width: 90%;
+    //margin: 2% auto;
     border: 3px solid #FFC107;
     box-shadow: 5px 5px 5px #ff9800;
   }
