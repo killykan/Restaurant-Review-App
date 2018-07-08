@@ -232,4 +232,4 @@ let skipBtn = document.getElementById("skip")
 skipBtn.addEventListener("click", () => {
   document.getElementById("map").setAttribute("hidden", "true");
   skipBtn.setAttribute("hidden", "true");
-})
+});
