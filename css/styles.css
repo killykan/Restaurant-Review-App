@@ -61,6 +61,16 @@ section {
 	display: block;
 }
 
+#skip {
+  font-size: 1em;
+  background: #FF9800;
+  color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  z-index: 3;
+  left: 96%;
+}
+
 .leaflet-container a {
     color: #FF5722;
 }
@@ -228,7 +238,7 @@ nav h1 a {
   min-width: 100%;
 }
 
-#restaurants-list li h1 {
+#restaurants-list li h2 {
   color: #f18200;
   font-family: Arial,sans-serif;
   font-size: 2em;
@@ -240,7 +250,7 @@ nav h1 a {
   background: #333;
 }
 
-#restaurants-list li h1:focus {
+#restaurants-list li h2:focus {
   outline: 2px dotted #0093ff;
 }
 
@@ -506,7 +516,7 @@ nav h1 a {
     justify-content: space-between;
   }
 
-  #restaurants-list li h1 {
+  #restaurants-list li h2 {
     font-size: 2.3em;
     padding: 1%;
   }
@@ -605,7 +615,7 @@ nav h1 a {
     justify-content: space-between;
   }
 
-  #restaurants-list li h1 {
+  #restaurants-list li h2 {
     margin: 10px 0 10px;
   }
 
@@ -737,7 +747,7 @@ nav h1 a {
     justify-content: space-between
   }
 
-  #restaurants-list li h1 {
+  #restaurants-list li h2 {
     font-size: 2.5em;
   }
 

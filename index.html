@@ -19,19 +19,20 @@
   </header>
 
   <main id="maincontent" role="main">
+    <button id="skip" role="button" aria-label="skip to main">X</button>
 
     <section id="map-container" aria-label="google map">
       <div id="map" role="application" aria-label="true" aria-describedby="map-info"></div>
       <span hidden id="map-info">Map showing filtered restaurants</span>
     </section>
 
-    <section>
+    <section >
       <div class="filter-options">
         <h2 tabindex="0">Choose a <strong>Location</strong> or/and a <strong>cuisine</strong></h2>
-        <select id="neighborhoods-select" aria-label="Select neighborhoods" name="neighborhoods" onchange="updateRestaurants()">
+        <select id="neighborhoods-select" aria-label="Select neighborhoods" tabindex="0" name="neighborhoods" onchange="updateRestaurants()">
           <option value="all">All Neighborhoods</option>
         </select>
-        <select id="cuisines-select" aria-label="Select cuisines" name="cuisines" onchange="updateRestaurants()">
+        <select id="cuisines-select" aria-label="Select cuisines" tabindex="0" name="cuisines" onchange="updateRestaurants()">
           <option value="all">All Cuisines</option>
         </select>
       </div>

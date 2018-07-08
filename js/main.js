@@ -81,6 +81,7 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
   });
 }
 
+
 /**
  * Initialize leaflet map, called from HTML.
  */
@@ -178,7 +179,7 @@ createRestaurantHTML = (restaurant) => {
   image.title = `an image of the ${restaurant.name} restaurant`;
   li.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   name.setAttribute("tabIndex", "0");
   li.append(name);
@@ -192,8 +193,9 @@ createRestaurantHTML = (restaurant) => {
   li.append(address);
 
   const more = document.createElement('a');
-  more.innerHTML = 'View Details';
+  more.innerHTML = 'view details';
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.setAttribute("aria-label", "details of the restaurant" + ` ${restaurant.name}`);
   li.append(more)
 
   return li
@@ -225,3 +227,9 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
+/*hide the map on click, for better accessibility*/
+let skipBtn = document.getElementById("skip")
+skipBtn.addEventListener("click", () => {
+  document.getElementById("map").setAttribute("hidden", "true");
+  skipBtn.setAttribute("hidden", "true");
+})
